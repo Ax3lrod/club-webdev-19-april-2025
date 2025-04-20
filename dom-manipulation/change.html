@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <p class="pesan">Halo semuanya</p>
+    <p class="pesan">Selamat datang di dunia pemrograman</p>
+    <a href="https://www.example.com" class="link">Kunjungi</a>
+
+    <div>
+      <img src="https://placehold.co/300x200/orange/white" alt="Image 1" id="gambar">
+    </div>
+
+    <div class="container">
+      <h1>Judul</h1>
+      <p>Ini adalah konten dalam div.</p>
+    </div> 
+  </body>
+</html>
+
+<script>
+    const pesan = document.querySelectorAll(".pesan");
+    pesan[0].innerHTML = "<h1>Halo, Dunia! Ini pesan pertama</h1>";
+    pesan[1].textContent = "Halo, Dunia! Ini pesan kedua";
+
+    const link = document.querySelector(".link");
+    link.setAttribute("href", "https://www.example.com/baru");
+
+    const image = document.querySelector("#gambar");
+    image.setAttribute("alt", "Ini gambar baru");
+    image.setAttribute("src", "https://placehold.co/300x200/blue/white");
+
+    const container = document.querySelector(".container");
+    container.style.backgroundColor = "lightblue";
+    container.style.width = "fit-content";
+    container.style.padding = "50px";
+    container.style.margin = "20px auto";
+    container.style.borderRadius = "50px";
+    container.querySelector("h1").style.color = "darkblue";
+    container.querySelector("p").style.fontSize = "18px";
+    container.querySelector("h1").style.textAlign = "center";
+    container.querySelector("p").style.textAlign = "center";
+</script>

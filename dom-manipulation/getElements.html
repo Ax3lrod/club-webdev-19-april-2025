@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <h1 id="judul">Halo, Dunia!</h1>
+
+    <p class="pesan">Pesan 1</p>
+    <p class="pesan">Pesan 2</p>
+
+    <div>Div 1</div>
+    <div>Div 2</div>
+
+    <span id="tombol">Tombol 2</span>
+    <span class="tombol">Tombol 1</span>
+
+    <ul id="daftar">
+      <li>Item A</li>
+      <li>Item B</li>
+    </ul>
+
+    <ul class="daftar">
+      <li>Item C</li>
+      <li>Item D</li>
+    </ul>
+  </body>
+</html>
+
+<script>
+    const judul = document.getElementById("judul");
+    console.log(judul);
+
+    const pesan = document.getElementsByClassName("pesan");
+    console.log(pesan); 
+    console.log(pesan[0]); 
+    console.log(pesan[1]); 
+    
+    const divs = document.getElementsByTagName("div");
+    console.log(divs); 
+    console.log(divs[0]); 
+    console.log(divs[1]); 
+
+    const tombol1 = document.querySelector(".tombol");
+    console.log(tombol1); 
+
+    const tombol2 = document.querySelector("#tombol");
+    console.log(tombol2);
+    
+    const daftar = document.querySelectorAll("ul li");
+    console.log(daftar); 
+
+    const daftar1 = document.querySelectorAll("#daftar li");
+    console.log(daftar1);
+    console.log(daftar1[0]);
+    console.log(daftar1[1]);
+
+    const daftar2 = document.querySelectorAll(".daftar li");
+    console.log(daftar2);
+    console.log(daftar2[0]);
+    console.log(daftar2[1]);
+</script>

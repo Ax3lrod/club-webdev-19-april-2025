@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body class="p-10 justify-center items-center flex flex-col space-y-8">
+    <h1 class="font-bold text-3xl text-center">To Do List App</h1>
+    <div>
+        <input type="text" id="taskInput" class="rounded-xl text-sm py-2 px-4" placeholder="Masukkan tugas baru...">
+        <button id="addTaskBtn" class="bg-black text-white rounded-xl text-sm py-2 px-4">Tambah Tugas</button>
+    </div>
+    <ul id="taskList"></ul>
+</body>
+</html>
+
+<script>
+    const addTaskBtn = document.querySelector('#addTaskBtn');
+    const taskInput = document.querySelector('#taskInput');
+    const taskList = document.querySelector('#taskList');
+
+    
+    function addTask() {
+        if (taskInput.value === '') {
+            alert('Tugas tidak boleh kosong!');
+            return;
+        }
+
+        const newTask = document.createElement("li");
+        newTask.textContent = taskInput.value;
+        newTask.className = 'bg-gray-200 w-80 h-fit py-2 px-4 rounded-xl m-4 flex justify-between items-center';
+
+        const deleteBtn = document.createElement('button')
+        deleteBtn.textContent = 'Hapus';
+        deleteBtn.className = 'bg-red-500 text-white rounded-lg py-1 px-3';
+        newTask.appendChild(deleteBtn);
+
+        function removeBtn(){
+            taskList.removeChild(newTask);
+        }
+
+        deleteBtn.addEventListener('click', removeBtn)
+        
+        taskList.appendChild(newTask);
+        taskInput.value = '';
+    }
+
+    addTaskBtn.addEventListener('click', addTask);
+</script>

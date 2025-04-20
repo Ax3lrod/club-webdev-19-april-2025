@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Judul</h1>
+      <p>Ini adalah konten dalam div.</p>
+    </div>
+  </body>
+</html>
+
+<script>
+  const container = document.querySelector(".container");
+  const newElement = document.createElement("p");
+  newElement.textContent = "halo gais ini konten baru";
+  container.appendChild(newElement);
+
+  const removeElement = document.querySelector(".container p");
+  container.removeChild(removeElement);
+</script>
+
